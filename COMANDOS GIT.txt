@@ -1,0 +1,47 @@
+===========================================================
+          GUIA RÁPIDO DE COMANDOS GIT (NOTAÇÃO)
+===========================================================
+
+1. CONFIGURAÇÃO INICIAL (Apenas uma vez)
+-----------------------------------------------------------
+git config --global user.name "Seu Nome"
+git config --global user.email "seu-email@exemplo.com"
+
+2. INICIANDO UM PROJETO
+-----------------------------------------------------------
+git init                        # Inicia um repositório local
+git clone <url-do-repositorio>  # Baixa um projeto existente
+
+3. CICLO DE TRABALHO DIÁRIO (SALVAR ALTERAÇÕES)
+-----------------------------------------------------------
+git status                      # Verifica o que foi alterado
+git add .                       # Prepara TODOS os arquivos para o commit
+git add <nome-do-arquivo>       # Prepara apenas um arquivo específico
+git commit -m "Mensagem aqui"   # Salva as alterações localmente com descrição
+
+4. SINCRONIZAÇÃO (Puxar e Enviar)
+-----------------------------------------------------------
+git pull origin <branch>        # Baixa novidades do servidor (Ex: git pull origin main)
+git push origin <branch>        # Envia seus commits para o servidor (Ex: git push origin main)
+git remote -v                   # Lista os servidores remotos conectados
+
+5. RAMOS (BRANCHES)
+-----------------------------------------------------------
+git branch                      # Lista todas as branches locais
+git checkout -b <nome>          # Cria uma nova branch e entra nela
+git checkout <nome>             # Muda para uma branch existente
+git merge <nome>                # Une as alterações de outra branch na atual
+
+6. LOG E HISTÓRICO
+-----------------------------------------------------------
+git log                         # Mostra o histórico de commits (q para sair)
+git log --oneline               # Histórico resumido em uma linha por commit
+
+7. DESFAZENDO ERROS (CUIDADO!)
+-----------------------------------------------------------
+git checkout -- <arquivo>       # Descarta mudanças não salvas em um arquivo
+git reset --hard HEAD           # Apaga TUDO o que não foi commitado e volta ao início
+git commit --amend -m "Novo"    # Corrige a mensagem do último commit feito
+
+===========================================================
+Dica: Use 'git --help' para ver detalhes de qualquer comando.
